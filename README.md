@@ -67,4 +67,4 @@ Docs: [crawlee.dev](https://crawlee.dev/)
 
 ## License
 
-[MIT License](https://github.com/loanngo99/bun-scraping?tab=MIT-1-ov-file). Copyright (c) 2024 Emma Ngo
+[MIT License](https://github.com/loanngo99/bunapi?tab=MIT-1-ov-file). Copyright (c) 2024 Emma Ngo
