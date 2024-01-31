@@ -1,7 +1,7 @@
-import { getApiDocs } from '@/lib/swagger'
+import { getApiDocs } from '../../lib/swagger'
 import ReactSwagger from '../../components/react-swagger'
 
-export default async function IndexPage() {
+export default async function APIDocs() {
     const spec = await getApiDocs()
 
     return (
