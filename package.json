@@ -1,27 +1,48 @@
 {
   "name": "bun-api",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "An Open API by bunhere.com",
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
+  "keywords": [
+    "scraping",
+    "google developer profile",
+    "microsoft learning path",
+    "api",
+    "badge",
+    "trophy",
+    "cert",
+    "certificate",
+    "credly"
+  ],
+  "author": "Emma Ngo",
+  "license": "MIT",
   "dependencies": {
+    "axios": "^1.6.5",
+    "express": "^4.18.2",
+    "canvas": "^2.11.2",
+    "cheerio": "^1.0.0-rc.12",
+    "playwright": "^1.41.1",
+    "puppeteer": "^21.9.0",
+    "crawlee": "^3.7.3",
+    "next": "14.1.0",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.1.0"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.1.0"
+    "typescript": "^5"
   }
 }
