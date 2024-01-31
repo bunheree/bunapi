@@ -1,46 +1,43 @@
-# 🔎 BUN Scraping
+# Welcome to bunapi 👋
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p>
+<a href="#"><img src="https://img.shields.io/badge/BunAPI-v1.0.0-orange?logo=dependabot" alt="Build Status"></a>
+<a href="https://github.com/loanngo99/bunapi/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue" alt="License"></a>
+</p>
 
-## Quick Started
+## 🔎 BUN Scraping
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<a href="#"><img src="https://img.shields.io/badge/BUN Scraping-v1.0.0-pink?logo=FastAPI" alt="Build Status"></a>
 
 ### API call
 
 1. **Google Developer Profile**
 
 ```bash
-/api/gg-badges
+{APIEndpoint}/api/gg-badges?userid={username}
 ```
 
 Properties
 
+*Example*: https://developers.google.com/profile/u/bunhere
+
 Param | Value
-------|------------------------------------------------------
-url   | Example: https://developers.google.com/profile/u/bunhere
+------|---------
+userid| String
 
 2. **Microsoft Badges, Trophies**
 
 ```bash
-/api/microsoft-badges
+{APIEndpoint}/api/microsoft-badges?userid={username}
 ```
 
 Properties
 
+*Example*: https://learn.microsoft.com/en-us/users/emmango-1181
+
 Param | Value
-------|------------------------------------------------------
-url   | Example: https://learn.microsoft.com/en-us/users/emmango-1181
+------|------------------------------
+userid| String
 type  | `all` or `trophy` or `badge`
 
 *Note*: `type` upcoming soon...
@@ -48,14 +45,16 @@ type  | `all` or `trophy` or `badge`
 3. **Credly Certificates**
 
 ```bash
-/api/creadly
+{APIEndpoint}/api/credly?userid={username}
 ```
 
 Properties
 
+*Example*: https://www.credly.com/users/emma-ngo/badges
+
 Param | Value
-------|------------------------------------------------------
-url   | Example: https://www.credly.com/users/emma-ngo/badges
+------|---------
+userid| String
 
 ### Docs
 
