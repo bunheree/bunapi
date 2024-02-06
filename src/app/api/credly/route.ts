@@ -1,4 +1,6 @@
-import { getCredlyBadges } from '../../../middleware/credly'
+// import { getCredlyBadges } from '../../../middleware/credly'
+import axios from 'axios'
+import cheerio from 'cheerio'
 import { NextResponse } from 'next/server'
 
 /**
@@ -46,8 +48,34 @@ export async function GET(req: Request) {
             return NextResponse.json({ message: 'Invalid user profile id' }, { status: 500 })
         }
         const url = 'https://www.credly.com/users/' + userid + '/badges'
+        
         // Start the crawler
-        const badges = await getCredlyBadges(url)
+        const response = await axios.get(url)
+        const html = response.data
+
+        const $ = cheerio.load(html)
+
+        const icons: any[] = []
+        $('.c-badge img').each((index, element) => {
+            icons.push($(element).attr('src'))
+        })
+
+        const titles: any[] = []
+        $('.c-badge .cr-standard-grid-item-content__title').each((index, element) => {
+            titles.push($(element).text())
+        })
+
+        const subTitles: any[] = []
+        $('.c-badge .cr-standard-grid-item-content__subtitle').each((index, element) => {
+            subTitles.push($(element).text())
+        })
+
+        // Using a loop to create an object
+        const badges = icons.map((icon, index) => ({
+            icon: icon,
+            title: titles[index],
+            from: subTitles[index]
+        }))
 
         return NextResponse.json({
             data: badges,
