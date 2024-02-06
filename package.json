@@ -23,6 +23,7 @@
   "author": "Emma Ngo",
   "license": "MIT",
   "dependencies": {
+    "@sparticuz/chromium-min": "^121.0.0",
     "axios": "^1.6.5",
     "canvas": "^2.11.2",
     "cheerio": "^1.0.0-rc.12",

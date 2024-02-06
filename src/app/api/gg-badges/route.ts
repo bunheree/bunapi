@@ -1,4 +1,5 @@
 import puppeteer from 'puppeteer'
+import chromium from "@sparticuz/chromium-min"
 import { NextResponse } from 'next/server'
 
 /**
@@ -47,7 +48,10 @@ export async function GET(req: Request) {
         }
         const url = 'https://developers.google.com/profile/u/' + userid
         // Start the crawler
-        const browser = await puppeteer.launch()
+        const browser = await puppeteer.launch({
+            args: chromium.args,
+            headless: true,
+        })
         const page = await browser.newPage()
         await page.goto(url, { waitUntil: 'networkidle2' })
 
